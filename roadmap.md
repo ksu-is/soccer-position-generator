@@ -1,5 +1,5 @@
 # Roadmap
-- [x] Define player stats
+- [ ] Define player stats
 - [ ] Create player class
 - [ ] List positions in 4-4-2 formation
 - [ ] Give each position their own traits
