@@ -2,13 +2,15 @@
 {% block content %}
 <div class="home">
     <h1>Homepage</h1>
-    <p><form action="{{ url_for('greet') }}" method='post'>
+    <p>
+    <form action="{{ url_for('greet') }}" method='post'>
         Please enter your full name: <input type='text' name='myName'><br>
         Please enter your weight in pounds: <input type='number' weight='myWeight'><br>
         Please enter your height in inches: <input type='number' height='myHeight'><br>
         Please enter your speed on a scale of 1-10: <input type='number' speed='mySpeed'><br>
         <p>Name: {{myName}} Weight: {{myWeight}} Height: {{myHeight}} Speed: {{mySpeed}}</p>
         <input type='submit' value='Submit'>
-        </form></p>
+    </form>
+    </p>
 </div>
 {% endblock %}
