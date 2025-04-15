@@ -13,10 +13,10 @@ app=Flask(__name__)
 @app.route('/greet', methods=['POST'])
 def greet():
     inputName = request.form['myName']
-    ip = request.remote_addr
-    #write data to file or to DB
-    inputName = inputName.upper()+" hi!  Visiting from " + str(ip)
-    return render_template("home.html",myName=inputName)
+    inputWeight = request.form['myWeight']
+    inputHeight = request.form['myHeight']
+    inputSpeed = request.form['mySpeed']
+    return render_template("home.html", myName=inputName, myWeight=inputWeight, myHeight=inputHeight, mySpeed=inputSpeed)
 
 @app.route('/')
 def home():  

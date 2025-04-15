@@ -5,10 +5,13 @@
     <p>
     <form action="{{ url_for('greet') }}" method='post'>
         Please enter your full name: <input type='text' name='myName'><br>
-        Please enter your weight in pounds: <input type='number' weight='myWeight'><br>
-        Please enter your height in inches: <input type='number' height='myHeight'><br>
-        Please enter your speed on a scale of 1-10: <input type='number' speed='mySpeed'><br>
-        <p>Name: {{myName}} Weight: {{myWeight}} Height: {{myHeight}} Speed: {{mySpeed}}</p>
+        Please enter your weight in pounds: <input type='number' name='myWeight'><br>
+        Please enter your height in inches: <input type='number' name='myHeight'><br>
+        Please enter your speed on a scale of 1-10: <input type='number' name='mySpeed'><br>
+        <p>Name: {{myName}}</p>
+        <p>Weight: {{myWeight}}</p>
+        <p>Height: {{myHeight}}</p>
+        <p>Speed: {{mySpeed}}</p>
         <input type='submit' value='Submit'>
     </form>
     </p>
