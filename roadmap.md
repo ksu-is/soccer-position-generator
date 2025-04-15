@@ -1,9 +1,9 @@
 # Roadmap
-- [ ] Define player stats
-- [ ] Create player class
+- [X] Define player stats
+- [X] Create player class
 - [ ] List positions in 4-4-2 formation
 - [ ] Give each position their own traits
 - [ ] Assign players to positions
-- [ ] Allow user input
+- [X] Allow user input
 - [ ] Eventially expand to allow for more formations
-- [ ] Create a GUI for program
+- [X] Create a GUI for program
