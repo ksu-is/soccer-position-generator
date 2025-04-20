@@ -1,22 +1,18 @@
-'''
-This is a basic web page running with Flask.
-'''
-
+import generator
 from flask import Flask, render_template, request
-#This is the Flask object, we are creating an instance of the Flask class and storing it in the variable app
-#__name__ is a special variable in Python that is the name of the module, which is this file's name without the .py extension
 app=Flask(__name__)
 
-#This is a decorator, it is a function that takes a function as a parameter!
-#A decorator is a function that wraps another function
-#This decorator is saying that when someone goes to the URL /greet, run the greet function
 @app.route('/greet', methods=['POST'])
 def greet():
     inputName = request.form['myName']
     inputWeight = request.form['myWeight']
     inputHeight = request.form['myHeight']
     inputSpeed = request.form['mySpeed']
-    return render_template("home.html", myName=inputName, myWeight=inputWeight, myHeight=inputHeight, mySpeed=inputSpeed)
+    inputFoot = request.form['myFoot']
+
+    myPosition = generator.assign_position(inputHeight, inputWeight, inputSpeed, inputFoot)
+
+    return render_template("home.html", myName=inputName, myWeight=inputWeight, myHeight=inputHeight, mySpeed=inputSpeed, myFoot=inputFoot, myPosition=myPosition)
 
 @app.route('/')
 def home():  

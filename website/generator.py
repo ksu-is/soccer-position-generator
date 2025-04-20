@@ -1,4 +1,8 @@
 def assign_position(height, weight, speed, foot = "r"): 
+    height = int(height)
+    weight = int(weight)
+    speed = int(speed)
+    foot = str(foot)
     goalie = sum([abs(76 - height)*5, abs(170 - weight) , abs(2 - speed)*10])
     winger = sum([abs(65 - height)*5, abs(140 - weight) , abs(10 - speed)*10])
     striker = sum([abs(70 - height)*5, abs(160 - weight) , abs(9 - speed)*10])
@@ -12,17 +16,18 @@ def assign_position(height, weight, speed, foot = "r"):
     f = position[index]
     if index in [1, 4, 5]:
         f = "Left " + f if foot == "l" else "Right " + f
-    print(f"Your position is: {f}")
+    return f
 
 def main():
     print("Enter your player info:")
-    height = int(input("Height (in inches): "))
-    weight = int(input("Weight (in pounds): "))
-    speed = int(input("Speed (1-10): "))
-    foot = str(input("Which foot do you kick with? (Left or Right): "))
+    height = input("Height (in inches): ")
+    weight = input("Weight (in pounds): ")
+    speed = input("Speed (1-10): ")
+    foot = input("Which foot do you kick with? (Left or Right): ")
     foot = "l" if "l" in foot.lower() else "r"
 
-    position = assign_position(height, weight, speed, foot)
+    var = assign_position(height, weight, speed, foot)
+    print(f"Your position is: {var}")
 
 if __name__ == "__main__":
     main()
