@@ -20,7 +20,7 @@ def greet():
 
 @app.route('/')
 def home():  
-    return render_template("home.html",myName="Type your name in the box and click submit!")
+    return render_template("home.html")
 
 @app.route('/about/')
 def about():
