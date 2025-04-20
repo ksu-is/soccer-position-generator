@@ -1,9 +1,13 @@
 # Roadmap
-- [X] Define player stats
-- [X] Create player class
-- [ ] List positions in 4-4-2 formation
-- [ ] Give each position their own traits
-- [ ] Assign players to positions
+- [X] Define player variables
+- [X] Decide on thresholds
+- [X] Map player profiles to positions
+- [X] Write pseudocode
 - [X] Allow user input
-- [ ] Eventially expand to allow for more formations
+- [X] Create conditional statements to assign position
 - [X] Create a GUI for program
+
+# Anything past this point is meant for future additions
+- [ ] Add small summary for each position
+- [ ] Account for user inputing values outside parameters
+- [ ] Add easter eggs
