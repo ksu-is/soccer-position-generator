@@ -53,3 +53,17 @@ div.about {
   margin-left: 35px;
 }
 
+#submitButton{
+  background-color:#207933;
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px;
+}
+
+.green {
+  color: #207933;
+}
+
+input {
+  margin-bottom: 5px;
+}
